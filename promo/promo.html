@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./promo.css" type="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+      }
+      .navbar {
+      }
+      .navbar-nav {
+        margin: 10px 20px 0 auto;
+      }
+      .nav-link {
+        margin: 5px;
+      }
+      .promote {
+        display: flex;
+        position: relative;
+        background-image: url(./images/earth-1756274__480.webp);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+      }
+      .promote::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -2;
+      }
+      .card {
+        position: relative;
+        min-width: 200px;
+        text-align: center;
+        right: 20px;
+        color: black;
+        margin: 10px;
+        padding-right: 10px;
+        z-index: 100;
+        margin-bottom: 10px;
+        background: linear-gradient(
+          25deg,
+          rgb(248, 10, 10, 0.5),
+          rgb(237, 158, 11, 0.5),
+          rgb(15, 231, 255, 0.5),
+          rgb(235, 10, 145, 0.5)
+        );
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(
+          25deg,
+          rgb(248, 10, 10, 0.5),
+          rgb(237, 158, 11, 0.5),
+          rgb(15, 231, 255, 0.5),
+          rgb(235, 10, 145, 0.5)
+        );
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: blur(20px);
+        z-index: -3;
+        background: linear-gradient(
+          25deg,
+          rgb(248, 10, 10, 0.5),
+          rgb(237, 158, 11, 0.5),
+          rgb(15, 231, 255, 0.5),
+          rgb(235, 10, 145, 0.5)
+        );
+      }
+      .card input,
+      textarea {
+        margin: 10px;
+        width: 100%;
+        padding: 5px;
+      }
+      .card textarea {
+        min-height: 100px;
+      }
+      .promote {
+        display: flex;
+      }
+      .practice-body {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+      }
+      .practice-body .images {
+        margin: 20px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      .practice-body .images img {
+        width: 100%;
+      }
+      .amazing-features {
+        background-color: rgb(91, 88, 88);
+      }
+      .amazing-features-body {
+        display: flex;
+      }
+      .image1 img {
+        margin-top: 30px;
+        width: 100%;
+        height: 50vh;
+      }
+      .image-content h2 {
+        font-weight: 600;
+        margin: 3px;
+      }
+      .image-content h3 {
+        color: gainsboro;
+      }
+      .about-us-body {
+        display: flex;
+      }
+      .icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .icons div {
+        margin: 20px;
+        position: relative;
+      
+      }
+      .icons div i {
+        border: 4px solid black;
+        border-top: 4px solid violet;
+        border-bottom: 4px solid blue;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, rgb(13, 58, 219), rgb(161, 29, 222));
+      }
+      .about-image img {
+        width: 100%;
+        min-height: 40vh;
+      }
+      .watch {
+        background-image: url(./images/bicycle-1872682__480.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+      }
+      .watch::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background-color: rgb(0, 0, 0, 0.5);
+      }
+
+      .our-lawers-body {
+        justify-content: space-evenly;
+        display: flex;
+      }
+      .package{
+        background-color: rgb(174, 173, 173);
+      }
+      .our-lawers-body i {
+        padding: 10px;
+        font-size: 20px;
+        color: black;
+        padding-top: 0;
+      }
+      .our-lawers-body div {
+        background-color: white;
+        border-radius: 4px;
+        margin: 10px;
+      }
+      .our-card{
+        min-width: 250px;
+        padding: 20px;
+        height: auto;
+        background-color: white;
+        text-align: center;
+        border-radius: 4px;
+        margin: 5px;
+        transition: .5s;
+      }
+      .our-card button{
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        width: 90%;
+        margin: 10px;
+ 
+      }
+      .our-card:hover button{
+        background-color: white;
+        color: black;
+      }
+      .our-card i{
+        font-size: 30px;
+      }
+      .our-card .card-bo h4{
+        border-bottom: 1px solid black;
+        padding: 2px;
+      }
+      .our-card:hover .card-bo h4{
+        border-bottom: 1px solid rgb(255, 255, 255,.5);
+      }
+      .our-card:hover{
+        border-radius: 0;
+         color: white;
+         border: 2px solid white;
+         box-shadow: 1px 3px 4px black;
+         background: linear-gradient(to right,rgb(231, 47, 231),rgb(0, 51, 255));
+        transition: .5s;
+        transform:translateY(-10px);
+        cursor: pointer;
+        margin: 10px;
+      }
+      .card1{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    
+      }
+      @media screen and (max-width: 576px) {
+        .promote {
+          display: block;
+        }
+        .card {
+          position: relative;
+          min-width: 200px;
+          text-align: center;
+          color: black;
+          margin: 0 20px 0 40px;
+          background-color: rgba(53, 50, 50, 0.5);
+        }
+        .practice-body {
+          display: block;
+        }
+        .amazing-features-body {
+          display: block;
+          margin: 0 20px 0;
+        }
+        .about-us-body {
+          display: flex;
+          flex-direction: column;
+        }
+        .our-lawers-body {
+          display: block;
+        }
+        .icons div {
+          display: flex;
+          flex-direction: column;
+        }
+        .card1{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-brand">logodesign</div>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-target="#navlist"
+          data-bs-toggle="collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navlist">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="" class="nav-link">home</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">services</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">team</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">price</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="promote text-light">
+        <div class="promote-content p-5">
+          <h2>
+            what we can do for you?
+            <span style="border: 1px solid rgb(255, 255, 255)">accident</span>
+            law
+          </h2>
+          <h1>promote your law business</h1>
+          <h5 class="m-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h5>
+          <button type="button" class="btn btn-primary m-3">get started</button>
+        </div>
+
+        <div class="card">
+          <div class="card-header">get your free estimate</div>
+          <div class="card-body">
+            <div>
+              <input type="text" name="" id="" placeholder="your full name" />
+            </div>
+            <div>
+              <input type="email" name="" id="" placeholder="your email" />
+            </div>
+            <div>
+              <input type="text" name="" id="" placeholder="your phone" />
+            </div>
+            <div>
+              <textarea placeholder="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">submit now</button>
+          </div>
+        </div>
+      </div>
+      <div class="practice">
+        <div class="practice-head text-center">
+          <h1>practice areas</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+        </div>
+        <div class="practice-body" style="background-color: aliceblue">
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+          <div class="images">
+            <img src="./images/indexspa.jpg" alt="" />
+            <h2>divorce law</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="amazing-features">
+        <div class="amazing-features-head text-center text-light">
+          <h1>amazing features</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+        </div>
+        <div class="amazing-features-body mt-5">
+          <div class="image1">
+            <img src="./images/pexels-ovan-57690.jpg" alt="" />
+          </div>
+          <div class="image-content">
+            <div>
+              <h2>first features goes here!</h2>
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                laborum consequuntur quas aliquam.
+              </h3>
+            </div>
+            <div>
+              <h2>second features goes here!</h2>
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                laborum consequuntur quas aliquam.
+              </h3>
+            </div>
+            <div>
+              <h2>third features goes here!</h2>
+              <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                laborum consequuntur quas aliquam.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-us">
+        <div class="about-us-head text-center">
+          <h1>about us</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+        </div>
+        <div class="about-us-body">
+          <div class="about-us-content mt-5">
+            <h2>fusce consequat elit eget</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              laborum consequuntur quas aliquam. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quia laborum consequuntur quas
+              aliquam.
+            </p>
+            <div class="icons">
+              <div>
+                <i class="fa-solid fa-laptop"></i><br />
+                mauris convalls fells
+              </div>
+              <div>
+                <i class="fa-solid fa-laptop"></i><br />
+                mauris convalls fells
+              </div>
+              <div>
+                <i class="fa-solid fa-laptop"></i><br />
+                mauris convalls fells
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="./images/indexspa.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="watch text-light text-center mt-5">
+        <div class="watch-content">
+          <h1>watch our video</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+          <iframe
+            width="50%"
+            height="400px"
+            src="https://www.youtube-nocookie.com/embed/-4Cw-pQR7L8"
+            title="YouTube video player"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+      <div class="our-lawers" style="background-color: aliceblue">
+        <div class="our-laewrs-head text-center">
+          <h1>our lawers</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+        </div>
+        <div class="our-lawers-body text-center mt-4">
+          <div>
+            <img src="./images/indexcap.jpg" alt="" />
+            <h2>captain</h2>
+            <p>head</p>
+            <div>
+              <a href="">
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
+              <a href=""><i class="fa-brands fa-square-facebook"></i> </a>
+              <a href="">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src="./images/indexcap.jpg" alt="" />
+            <h2>captain</h2>
+            <p>head</p>
+            <div>
+              <a href="">
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
+              <a href=""><i class="fa-brands fa-square-facebook"></i> </a>
+              <a href="">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src="./images/indexcap.jpg" alt="" />
+            <h2>captain</h2>
+            <p>head</p>
+            <div>
+              <a href="">
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
+              <a href=""><i class="fa-brands fa-square-facebook"></i> </a>
+              <a href="">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="package">
+        <div class="package-head mb-5 text-center">
+          <h1>our packages</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+            laborum consequuntur quas aliquam.
+          </h3>
+        </div>
+        <div class="card1">
+          <div class="our-card">
+            <div class="card-head " >
+              <h2>basic</h2>
+              <i class="fa-brands fa-square-twitter"></i>
+              <h1>$49</h1>
+              <h5>per month</h5>
+            </div>
+            <div class="card-bo">
+                <h4>15 pages</h4>
+                <h4>40 gb storage</h4>
+                <h4>unlimited data trasfer</h4>
+                <h4>100 gb bandwith</h4>
+                <h4>enhanced security</h4>
+            </div>
+            <button type="submit" >buy now</button>
+          </div>
+          <div class="our-card">
+            <div class="card-head " >
+              <h2>basic</h2>
+              <i class="fa-brands fa-square-twitter"></i>
+              <h1>$49</h1>
+              <h5>per month</h5>
+            </div>
+            <div class="card-bo">
+                <h4>15 pages</h4>
+                <h4>40 gb storage</h4>
+                <h4>unlimited data trasfer</h4>
+                <h4>100 gb bandwith</h4>
+                <h4>enhanced security</h4>
+            </div>
+            <button type="submit" >buy now</button>
+          </div>
+          <div class="our-card">
+            <div class="card-head " >
+              <h2>basic</h2>
+              <i class="fa-brands fa-square-twitter"></i>
+              <h1>$49</h1>
+              <h5>per month</h5>
+            </div>
+            <div class="card-bo">
+                <h4>15 pages</h4>
+                <h4>40 gb storage</h4>
+                <h4>unlimited data trasfer</h4>
+                <h4>100 gb bandwith</h4>
+                <h4>enhanced security</h4>
+            </div>
+            <button type="submit" >buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

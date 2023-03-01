@@ -1,0 +1,11 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+.navbg{
+    background: url(./images/earth-1756274__480);
+}
